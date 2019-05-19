@@ -189,8 +189,8 @@ body {
 
 .form-register .steps li a .step-text {
     color: #999;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 16px;
     padding: 14px 0 8px;
 }
 
@@ -221,7 +221,7 @@ body {
 .form-register .content .inner h3 {
     font-size: 25px;
     color: #333;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0;
     padding-bottom: 18px;
 }
@@ -232,7 +232,7 @@ body {
 
 .form-register .content .inner h4 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
     color: #333;
     margin: 0;
 }
@@ -568,4 +568,8 @@ body {
     .inner .form-row #checkbox {
         margin-left: 0;
     }
+}
+
+.table th {
+    color: #000;
 }
