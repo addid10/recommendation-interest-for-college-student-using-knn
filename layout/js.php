@@ -4,7 +4,6 @@
 <script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-<script src="assets/js/test.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
     (

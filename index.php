@@ -15,7 +15,7 @@
     <?php require_once('layout/header.php'); ?>
 
     <!-- Banner -->
-    <section class="hero-banner">
+    <section class="hero-banner mt-5">
         <div class="container text-center">
             <span class="hero-banner-icon"><i class="fa fa-laptop-code"></i></span>
             <h5 class="text-uppercase mb-0">Sistem Rekomendasi</h5>

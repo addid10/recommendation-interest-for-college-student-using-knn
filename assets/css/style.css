@@ -1236,4 +1236,129 @@ h4,
     color: #4a2eff
 }
 
-.form-login {}
+
+
+.scheduleTab .nav {
+    border-bottom: 0;
+    justify-content: center;
+    margin-bottom: 40px
+}
+
+@media (min-width: 992px) {
+    .scheduleTab .nav {
+        margin-bottom: 80px
+    }
+}
+
+.scheduleTab .nav-item {
+    margin-right: 10px
+}
+
+@media (min-width: 992px) {
+    .scheduleTab .nav-item {
+        margin-right: 30px
+    }
+}
+
+.scheduleTab .nav-item:last-child {
+    margin-right: 0
+}
+
+.scheduleTab .nav-item a {
+    display: block;
+    padding: 8px 16px;
+    background: #f7f7f7;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+@media (min-width: 992px) {
+    .scheduleTab .nav-item a {
+        padding: 20px 42px;
+        margin-bottom: 0
+    }
+}
+
+.scheduleTab .nav-item h4 {
+    font-size: 20px;
+    margin-bottom: 5px
+}
+
+.scheduleTab .nav-item p {
+    font-size: 15px;
+    color: #797979;
+    margin-bottom: 0
+}
+
+.scheduleTab .nav-item a.active {
+    background: #3b1d82
+}
+
+.scheduleTab .nav-item a.active>* {
+    color: #fff
+}
+
+.card-identity {
+    background: #3b1d82;
+    text-align: center;
+    padding: 35px 10px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+.card-identity>* {
+    color: #fff
+}
+
+.card-identity img {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 15px
+}
+
+.card-identity h3 {
+    margin-bottom: 5px
+}
+
+.schedule-content {
+    padding: 10px
+}
+
+@media (min-width: 768px) {
+    .schedule-content {
+        padding: 5px 40px 5px 40px
+    }
+}
+
+.schedule-content .schedule-date {
+    font-size: 14px
+}
+
+.schedule-content .schedule-title {
+    display: inline-block;
+    margin-bottom: 8px
+}
+
+.schedule-card {
+    background: #f7f7f7;
+    margin-bottom: 30px
+}
+
+.schedule-card p {
+    margin-bottom: 0
+}
+
+.schedule-card:hover .card-identity {
+    background: #ea0763
+}
+
+.schedule-card:last-child {
+    margin-bottom: 0
+}

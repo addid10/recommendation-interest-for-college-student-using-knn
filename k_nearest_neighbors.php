@@ -3,6 +3,11 @@
 
 <?php if(isset($_SESSION['college_student_username'])): ?>
 
+<!-- Check -->
+<?php require_once('k_nearest_neighbors.check.php'); ?>
+
+<?php if($total == 0): ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,15 +52,17 @@
                                 <div class="table-responsive">
                                     <table class="table table-bordered">
                                         <tr>
+                                            <th>No.</th>
                                             <th>Sepal.Length</th>
                                             <th>Sepal.Width</th>
                                             <th>Species</th>
                                         </tr>
                                         <?php foreach($trainingDatas as $data): ?>
                                         <tr>
+                                            <th><?= $no++ ?></th>
                                             <td><?= $data->var_f20 ?></td>
                                             <td><?= $data->var_f21 ?></td>
-                                            <td><?= $data->result ?></td>
+                                            <td><?= $data->result_name ?></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </table>
@@ -107,11 +114,17 @@
 
     <!-- Javascript -->
     <?php require_once('layout/js.php'); ?>
+    <script src="assets/js/process.js"></script>
 
 
 </body>
 
 </html>
+
+
+<?php else: ?>
+<?php header('location: result'); ?>
+<?php endif ?>
 
 
 <?php else: ?>
