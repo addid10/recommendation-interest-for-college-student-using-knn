@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
-    require('database/db.php');
+    require('../database/db.php');
     if(isset($_POST['fullname']) && isset($_POST['username']) && isset($_POST['password'])) {
         //Variable dari Form
         $fullname   = $_POST['fullname'];
@@ -45,7 +45,7 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
 
                         
                 /*Lokasi*/
-                $location['result'] = '../proyek-sc';
+                $location['result'] = '../';
                 echo json_encode($location);
             }
         }

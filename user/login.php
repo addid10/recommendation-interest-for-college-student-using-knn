@@ -1,8 +1,8 @@
 <!-- Token -->
-<?php require_once('token/initialization.php'); ?>
+<?php require_once('../token/initialization.php'); ?>
 
 <?php if(isset($_SESSION['college_student_username'])): ?>
-<?php header('location: ../proyek-sc'); ?>
+<?php header('location: ../'); ?>
 <?php else: ?>
 
 <!DOCTYPE html>
@@ -11,12 +11,12 @@
 <head>
     <!-- Head -->
     <title>Login</title>
-    <?php require_once('layout/head.php'); ?>
+    <?php require_once('../layout/head.php'); ?>
 </head>
 
 <body>
     <!-- Header -->
-    <?php require_once('layout/header.php'); ?>
+    <?php require_once('../layout/header.php'); ?>
     <section class="speaker-bg section-padding">
         <div class="container">
             <div class="row">
@@ -32,10 +32,10 @@
                 <div class="col-12">
                     <div class="section-intro section-intro-white text-center pb-98px">
                         <h2 class="primary-text">Login</h2>
-                        <img src="assets/images/home/section-style.png" alt="">
+                        <img src="../assets/images/home/section-style-white.png" alt="">
                     </div>
                 </div>
-                <div class="col-6 mx-auto">
+                <div class="col-5 mx-auto">
                     <form id="formLogin" method="POST">
                         <div class="form-group">
                             <label for="userName" class="text-white">Username</label>
@@ -58,8 +58,8 @@
     </section>
 
     <!-- Javascript -->
-    <?php require_once('layout/js.php'); ?>
-    <script src="assets/js/form/login.js"></script>
+    <?php require_once('../layout/js.php'); ?>
+    <script src="../assets/js/form/login.js"></script>
 
 
 </body>

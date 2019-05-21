@@ -1,9 +1,9 @@
 
 <!-- Token -->
-<?php require_once('token/initialization.php'); ?>
+<?php require_once('../token/initialization.php'); ?>
 
 <?php if(isset($_SESSION['college_student_username'])): ?>
-<?php header('location: ../proyek-sc'); ?>
+<?php header('location: ../'); ?>
 <?php else: ?>
 
 <!DOCTYPE html>
@@ -12,14 +12,14 @@
 <head>
     <!-- Head -->
     <title>Sign Up</title>
-    <?php require_once('layout/head.php'); ?>
+    <?php require_once('../layout/head.php'); ?>
 </head>
 
 <body>
 
     <!-- Header -->
-    <?php require_once('layout/header.php'); ?>
-    <section class="speaker-bg section-padding p-5">
+    <?php require_once('../layout/header.php'); ?>
+    <section class="speaker-bg section-padding--small">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
@@ -33,11 +33,11 @@
                 </div>
                 <div class="col-12">
                     <div class="section-intro section-intro-white text-center pb-98px">
-                        <h2 class="primary-text">Sign Up</h2>
-                        <img src="assets/images/home/section-style.png" alt="">
+                        <h2 class="primary-text mb-0">Sign Up</h2>
+                        <img src="../assets/images/home/section-style-white.png" alt="">
                     </div>
                 </div>
-                <div class="col-6 mx-auto">
+                <div class="col-5 mx-auto">
                     <form id="formRegistration" method="POST">
                         <div class="form-group">
                             <label for="fullName" class="text-white">Fullname</label>
@@ -68,8 +68,8 @@
     </section>
 
     <!-- Javascript -->
-    <?php require_once('layout/js.php'); ?>
-    <script src="assets/js/form/signup.js"></script>
+    <?php require_once('../layout/js.php'); ?>
+    <script src="../assets/js/form/signup.js"></script>
 
 
 </body>

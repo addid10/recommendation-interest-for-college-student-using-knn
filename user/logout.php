@@ -5,10 +5,10 @@
         unset($_SESSION['college_student_username']);
         unset($_SESSION['college_student_id']);
     
-        header('location: login'); 
+        header('location: ../user/login'); 
         exit; 
     }
     else{
-        header('location: http://localhost/proyek-sc/'); 
+        header('location: ../'); 
     }
 ?>

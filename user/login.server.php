@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
-    require_once('database/db.php');
+    require_once('../database/db.php');
 
     if(isset($_POST['username']) && isset($_POST['password'])){
         $username = strtolower($_POST['username']);
@@ -10,7 +10,7 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
 
         /* Validasi Akun */
         $validation = $connection->prepare(
-            "SELECT user_id, password, COUNT(*) as count_user FROM users 
+            "SELECT user_id, password, role_id, COUNT(*) as count_user FROM users 
             WHERE username=:username");
         
         $validation->bindParam("username", $username);
@@ -22,20 +22,31 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
         $id     = $row['user_id'];
         $pass   = $row['password'];
         $count  = $row['count_user'];
+        $role   = $row['role_id'];
 
         if($count == 1) {
             if(password_verify($password, $pass) == $password){
-                $_SESSION['college_student_username']   = $username;
-                $_SESSION['college_student_id']    = $id;
+                if($role == 1) {
+                    $_SESSION['college_student_username']   = $username;
+                    $_SESSION['college_student_id']         = $id;
 
-                $location['result'] = '../proyek-sc';
-                echo json_encode($location);
-                exit;
+                    $location['result'] = '../';
+                    echo json_encode($location);
+                    exit;
+                } else if ($role == 2) {
+                    $_SESSION['admin_username']   = $username;
+                    $_SESSION['admin_id']         = $id;
+
+                    $location['result'] = 'admin';
+                    echo json_encode($location);
+                    exit;
+                }
             } else {
                 $location['result'] = 'login?status=Username atau password salah!';
                 echo json_encode($location);
                 exit;
             }
+
         } else {
             $location['result'] = 'login?status=Username atau password salah!';
             echo json_encode($location);

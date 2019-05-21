@@ -13,13 +13,12 @@
 
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav justify-content-end">
-                            <li class="nav-item active"><a class="nav-link text-uppercase" href="../proyek-sc">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase" href="../">Home</a></li>
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Metode</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="topsis">TOPSIS</a>
-                                    <li class="nav-item"><a class="nav-link" href="k_nearest_neighbors">K-Nearest Neighbors</a>
+                                    <li class="nav-item"><a class="nav-link" href="../testing">K-Nearest Neighbors</a>
                                 </ul>
                             </li>
                             <?php if(isset($_SESSION['college_student_username'])): ?>
@@ -27,11 +26,11 @@
                                 <a href="#" class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false"><?= $_SESSION['college_student_username'] ?></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="logout">Logout</a>
+                                    <li class="nav-item"><a class="nav-link" href="../user/logout">Logout</a>
                                 </ul>
                             </li>
                             <?php else: ?>
-                            <li class="nav-item"><a class="nav-link text-uppercase" href="login">Login</a>
+                            <li class="nav-item"><a class="nav-link text-uppercase" href="../user/login">Login</a>
                             <?php endif ?>
                         </ul>
                     </div>
