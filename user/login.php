@@ -3,6 +3,8 @@
 
 <?php if(isset($_SESSION['college_student_username'])): ?>
 <?php header('location: ../'); ?>
+<?php elseif(isset($_SESSION['admin_username'])): ?>
+<?php header('location: ../admin'); ?>
 <?php else: ?>
 
 <!DOCTYPE html>

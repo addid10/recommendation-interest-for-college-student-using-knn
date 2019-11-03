@@ -1,9 +1,9 @@
 <?php
-    session_start();
 
-    if(isset($_SESSION['college_student_username'])){
-        unset($_SESSION['college_student_username']);
-        unset($_SESSION['college_student_id']);
+    if(isset($_COOKIE['college_student_username'])){
+        setcookie('college_student_username', '', time()-31556926, '/');
+        setcookie('college_student_id', '', time()-31556926, '/');
+
     
         header('location: ../user/login'); 
         exit; 

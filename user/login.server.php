@@ -27,8 +27,8 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
         if($count == 1) {
             if(password_verify($password, $pass) == $password){
                 if($role == 1) {
-                    $_SESSION['college_student_username']   = $username;
-                    $_SESSION['college_student_id']         = $id;
+                    setcookie('college_student_username', $username, time() + (86400 * 30), "/");
+                    setcookie('college_student_id', $id, time() + (86400 * 30), "/");
 
                     $location['result'] = '../';
                     echo json_encode($location);
@@ -37,7 +37,7 @@ if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_toke
                     $_SESSION['admin_username']   = $username;
                     $_SESSION['admin_id']         = $id;
 
-                    $location['result'] = 'admin';
+                    $location['result'] = '../admin';
                     echo json_encode($location);
                     exit;
                 }
