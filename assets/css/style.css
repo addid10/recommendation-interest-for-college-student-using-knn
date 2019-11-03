@@ -1219,6 +1219,24 @@ h5 {
     color: #fff
 }
 
+
+.button-edit {
+    background: -moz-linear-gradient(136deg, #dd4242 0%, #ee0000 50%, #ff4a4a 100%);
+    background: -webkit-linear-gradient(136deg, #dd4242 0%, #ee0000 50%, #ff4a4a 100%);
+    background: -ms-linear-gradient(136deg, #dd4242 0%, #ee0000 50%, #ff4a4a 100%);
+    color: #fff;
+    border: 2px solid #ee0000;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.514);
+}
+
+.button-edit:hover {
+    background: -moz-linear-gradient(136deg, #d43a3a 0%, #db0101 50%, #e74343 100%);
+    background: -webkit-linear-gradient(136deg, #d43a3a 0%, #db0101 50%, #e74343 100%);
+    background: -ms-linear-gradient(136deg, #d43a3a 0%, #db0101 50%, #e74343 100%);
+    border: 2px solid #db0101;
+    color: #fff
+}
+
 .button-contactForm {
     background: -moz-linear-gradient(136deg, #597cfb 0%, #002ccc 50%, #3b7fcc 100%);
     background: -webkit-linear-gradient(136deg, #597cfb 0%, #002ccc 50%, #3b7fcc 100%);

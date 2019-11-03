@@ -4,11 +4,15 @@
 
 
     $evaluationDatas = $connection->prepare(
-        "SELECT * FROM testing_datas_evaluations e 
-        JOIN results r ON e.result_id=r.result_id
-        JOIN testing_datas n ON n.id=e.testing_data_id
-        WHERE n.user_id=:user_id
-        GROUP BY e.result_id ORDER BY euclidean_distance ASC LIMIT 3");
+        "SELECT * FROM results r 
+        INNER JOIN (
+            SELECT result_id, min(euclidean_distance) euclidean_distance FROM testing_datas_evaluations tde
+            WHERE tde.user_id=:user_id 
+            GROUP BY tde.result_id
+            ) as b 
+            
+            ON b.result_id = r.result_id
+            ORDER BY euclidean_distance ASC LIMIT 3");
 
     $evaluationDatas->bindParam("user_id", $id);
     $evaluationDatas->execute();

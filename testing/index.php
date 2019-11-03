@@ -223,7 +223,7 @@
                             <span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
                             <span class="step-text">Data Nilai</span>
                         </h2>
-                        <section>
+                        <section id="inputData">
                             <div class="inner">
                                 <h3>Masukkan <i>data</i> sesuai format berikut</h3>
                                 <div class="form-row">
@@ -242,6 +242,23 @@
                                                     <?php foreach($optionDatas as $option): ?>
                                                         <option value="<?= $option->option_value ?>"><?= $option->option_name ?></option>
                                                     <?php endforeach ?>
+                                                </select>
+                                            </div>
+                                        <?php elseif($key["Input"] == "subject"): ?>
+                                            <div class="form-group col-md-6">
+                                                <label><?= $key["Name"] ?> (<?= $key["Variable"] ?>)</label>
+                                                <select class="form-control" name="score[]">
+                                                    <option value="4">A</option>
+                                                    <option value="3.75">A-</option>
+                                                    <option value="3.5">B+</option>
+                                                    <option value="3">B</option>
+                                                    <option value="2.75">B-</option>
+                                                    <option value="2.5">C+</option>
+                                                    <option value="2">C</option>
+                                                    <option value="1.75">C-</option>
+                                                    <option value="1.5">D+</option>
+                                                    <option value="1">D</option>
+                                                    <option value="0">E</option>
                                                 </select>
                                             </div>
                                         <?php endif ?>
